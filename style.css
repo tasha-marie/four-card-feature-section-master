@@ -116,5 +116,28 @@
 
   html {
     font-family: var(--ff-poppins);
+    color: var(--grey-500);
+    font-size: var(--fs-main);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  body {
+    /* background-color: var(--grey-400); */
+  }
+
+  h1 {
+    font-size: var(--fs-heading);
+    font-weight: 200;
+  }
+
+  h2 {
+    font-size: var(--fs-heading-lg);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--fs-heading);
+    font-weight: 600;
   }
 }
