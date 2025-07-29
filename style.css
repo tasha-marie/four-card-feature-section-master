@@ -153,6 +153,12 @@
 }
 
 @layer layout {
+
+  main {
+    max-inline-size: 1200px;
+    margin: 2em;
+  }
+  
   .hero {
     display: flex;
     flex-direction: column;
@@ -161,30 +167,33 @@
     text-align: center;
     padding: 2em;
     gap: 1em;
+    margin: 0 auto;
   }
 
   .cards {
     display: grid;
-    grid-template-areas:
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
+    grid-template-areas: 
     "card-1"
     "card-2"
     "card-3"
     "card-4";
     gap: 1em;
-    padding: 2em;
+    margin: 0 auto;
   }
 
   .card {
     display: grid;
     grid-template-rows: auto auto;
-    gap: 1rem;
+    gap: 1em;
     background-color: var(--white);
     border-radius: 0.5em;
-    padding: 1.5em;
+    padding: 2em;
     text-align: left;
-    box-shadow: 0 2px 15px var(--grey-500);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     transition: transform 0.3s ease;
-    max-width: 100%;
+    width: 100%;
   }
 
   .card h3,
@@ -198,31 +207,34 @@
   }
 
   .card-1 {
-    border-top: 2px solid var(--cyan);
+    border-top: 3px solid var(--cyan);
     grid-area: card-1;
   }
 
   .card-2 {
-    border-top: 2px solid var(--red);
+    border-top: 3px solid var(--red);
     grid-area: card-2;
   }
 
   .card-3 {
-    border-top: 2px solid var(--orange);
+    border-top: 3px solid var(--orange);
     grid-area: card-3;
   }
 
   .card-4 {
-    border-top: 2px solid var(--blue);
+    border-top: 3px solid var(--blue);
     grid-area: card-4;
   }
 
   @media (min-width: 700px) {
     .cards {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-      
-       /* grid-auto-flow: dense; */
+      grid-template-areas: 
+      ". card-2 ."
+      "card-1 card-2 card-4"
+      "card-1 card-3 card-4"
+      ". card-3 .";
+      }
     }
   }
 }
