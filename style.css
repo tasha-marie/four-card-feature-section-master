@@ -110,8 +110,8 @@
 
     /* Font sizes */
     --fs-main: 0.938rem; /* 15px */
-    --fs-heading: 1.125rem; /* 18px */
-    --fs-heading-lg: 1.25rem; /* 20px */
+    --fs-heading: 1.25rem; /* 20px */
+    --fs-heading-lg: 1.5rem; /* 24px */
   }
 
   body {
